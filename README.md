@@ -158,7 +158,7 @@ The `MediaPlayer` in this library is the equivalent of Android's `MediaPlayer`, 
 is the equivalent of Android's `VideoView`.
 
 To migrate from the Android default classes to this library, just replace the imports in your Java headers. If
-there are any methods missing, fill free to open an issue on the issue tracker or submit a pull request.
+there are any methods missing, feel free to open an issue on the issue tracker or submit a pull request.
 
 ### API ###
 
