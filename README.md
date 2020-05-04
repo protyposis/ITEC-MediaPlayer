@@ -259,6 +259,17 @@ and serves as an example on how they can be used and extended. It is available f
 [MediaPlayer-Extended Demo](https://play.google.com/store/apps/details?id=at.aau.itec.android.mediaplayerdemo) on the Google Play Store.
 
 
+### Proguard ###
+
+```
+-keep class * implements com.coremedia.iso.boxes.Box {* ; }
+-keep class * implements com.coremedia.iso.fragment.MovieFragmentBox {* ; }
+-dontwarn com.coremedia.iso.boxes.*
+-dontwarn com.googlecode.mp4parser.authoring.tracks.mjpeg.**
+-dontwarn com.googlecode.mp4parser.authoring.tracks.ttml.**
+```
+
+
 Issues & Limitations
 --------------------
 
