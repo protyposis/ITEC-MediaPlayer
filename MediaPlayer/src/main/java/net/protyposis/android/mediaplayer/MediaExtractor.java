@@ -19,6 +19,7 @@ package net.protyposis.android.mediaplayer;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.MediaCodec;
+import android.media.MediaCodecInfo.CodecCapabilities;
 import android.media.MediaFormat;
 import android.net.Uri;
 import android.os.Build;
@@ -195,6 +196,8 @@ public class MediaExtractor {
             mediaFormat.setFloat(MEDIA_FORMAT_EXTENSION_KEY_DAR,
                     (float)mediaFormat.getInteger(MediaFormat.KEY_WIDTH)
                             / mediaFormat.getInteger(MediaFormat.KEY_HEIGHT));
+            mediaFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT,
+                    CodecCapabilities.COLOR_FormatYUV420Flexible);
         }
 
         return mediaFormat;
